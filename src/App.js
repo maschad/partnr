@@ -8,8 +8,10 @@
 
 import React, {Component} from 'react'
 import {StyleSheet, Text, View} from 'react-native'
-// Internal Dependency
+// Internal Dependencies
 import ReadString from './ReadString'
+import SetString from './SetString'
+
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -39,6 +41,10 @@ export default class App extends Component<Props> {
                 ) : (
                     <View>
                         <ReadString
+                            drizzle={this.props.drizzle}
+                            drizzleState={this.state.drizzleState}
+                        />
+                        <SetString
                             drizzle={this.props.drizzle}
                             drizzleState={this.state.drizzleState}
                         />
