@@ -1,5 +1,5 @@
-const MyStringStore = artifacts.require('MyStringStore')
+const user = artifacts.require('User')
 
 module.exports = function (deployer) {
-    deployer.deploy(MyStringStore)
+    deployer.deploy(user)
 }
