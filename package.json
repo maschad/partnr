@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "Base64": "^1.0.2",
+    "drizzle": "^1.4.0",
     "node-libs-react-native": "^1.0.3",
     "react": "16.8.3",
     "react-native": "0.59.9",
