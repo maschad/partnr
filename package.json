@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@makerdao/dai": "^0.16.2",
     "Base64": "^1.0.2",
     "drizzle": "^1.4.0",
     "node-libs-react-native": "^1.0.3",
