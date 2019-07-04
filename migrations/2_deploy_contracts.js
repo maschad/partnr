@@ -1,5 +1,5 @@
-const user = artifacts.require('User')
+const MultisigWalletFactory = artifacts.require('MultiSigWalletWithDailyLimitFactory.sol')
 
 module.exports = function (deployer) {
-    deployer.deploy(user)
+    deployer.deploy(MultisigWalletFactory)
 }
