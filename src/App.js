@@ -8,13 +8,9 @@
 
 import React, {Component} from 'react'
 import {StyleSheet, Text, View} from 'react-native'
-// Internal Dependencies
-import ReadString from './ReadString'
-import SetString from './SetString'
 
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
     state = {loading: true, drizzleState: null}
 
     componentDidMount() {
@@ -36,7 +32,8 @@ export default class App extends Component<Props> {
     render() {
         return (
             <View style={styles.container}>
-                {this.state.loading ? (
+            <Text>Working</Text>
+                {/* #TODO: Re-add once contracts are fixed {this.state.loading ? (
                     <Text>Loading Drizzle...</Text>
                 ) : (
                     <View>
@@ -49,7 +46,7 @@ export default class App extends Component<Props> {
                             drizzleState={this.state.drizzleState}
                         />
                     </View>
-                )}
+                )} */}
             </View>
         )
     }
