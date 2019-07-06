@@ -3,3 +3,6 @@ node_modules
 android/.gradle/
 android/app/build/
 build/
+android/app/.settings/org.eclipse.buildship.core.prefs
+.vscode/settings.json
+android/.settings/org.eclipse.buildship.core.prefs
