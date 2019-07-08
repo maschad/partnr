@@ -1,6 +1,6 @@
-uDecide
+partnr
 =======
-An dApp for assessing professional skills of a user.
+An dApp for saving together
 
 <!-- ABOUT THE PROJECT -->
 
