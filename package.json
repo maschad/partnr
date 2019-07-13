@@ -17,6 +17,7 @@
     "react-native-config": "^0.11.7",
     "react-native-navigation": "^2.22.3",
     "react-native-randombytes": "^3.5.3",
+    "truffle-hdwallet-provider": "^1.0.14",
     "vm-browserify": "^1.1.0",
     "web3": "^1.0.0-beta.55"
   },

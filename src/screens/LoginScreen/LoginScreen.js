@@ -9,8 +9,6 @@ import {
     Content,
     Header,
     Title,
-    Left,
-    Icon,
     Right
   } from "native-base";
 
@@ -37,18 +35,18 @@ export default class LoginScreen extends Component {
                 rounded
                 dark
                 style={{ marginTop: 10 }}
-                onPress={() => this.props.navigation.navigate("Chat")}
+                onPress={() => this.props.navigation.navigate("mnemonics")}
               >
-                <Text>Chat With People</Text>
+                <Text>Generate a wallet</Text>
               </Button>
               <Button
                 full
                 rounded
-                primary
+                dark
                 style={{ marginTop: 10 }}
-                onPress={() => this.props.navigation.navigate("ProfileScreen")}
+                onPress={() => this.props.navigation.navigate("linkWallet")}
               >
-                <Text>Goto Profiles</Text>
+                <Text>Already have a wallet?</Text>
               </Button>
             </Content>
           </Container>
