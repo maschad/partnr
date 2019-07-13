@@ -1,11 +1,12 @@
-pragma solidity >=0.4.22 <0.6.0;
+pragma solidity ^0.5.1;
 
 contract Escrow {
     // Parameters of the total savings.
-    // absolute unix timestamps (seconds since 1970-01-01)
     // or time periods in seconds.
     address payable public beneficiary;
-    uint public paymentTime;
+
+    // absolute unix timestamps (seconds since 1970-01-01)
+    uint256 public paymentTime;
 
     // Final savings goal.
     uint public totalRequestedSavings;
@@ -20,25 +21,24 @@ contract Escrow {
     event paymentDispatched(address beneficiary, uint amount);
     event totalRequestedSavingsIncreased(uint amount);
     event totalRequestedSavingsDecreased(uint amount);
-    event paymentTimeIncreased(uint time);
-    event paymentTimeDecreased(uint time);
 
     /// Create a simple auction with `_paymentTime`
     /// days, months or weeks  time on behalf of the
     /// beneficiary address `_beneficiary`.
     constructor(
         uint _paymentTime,
-        address payable _beneficiary
+        address payable _beneficiary,
+        uint _totalRequestedSavings
     ) public {
+        require(_paymentTime > now , "Cannot accept past date");
         beneficiary = _beneficiary;
-        paymentTime = now + _paymentTime;
+        paymentTime = _paymentTime;
+        totalRequestedSavings = _totalRequestedSavings;
     }
 
-    function proposeSavingTarget(uint amount) public {
-
-    }
-
-    function setSavingsGoal(uint amount) internal {
-        totalRequestedSavings = amount;
+    function release() public {
+        require(now >= paymentTime, "Funds are not ready to be released");
+        address(beneficiary).transfer(totalRequestedSavings);
+        emit paymentDispatched(beneficiary, totalRequestedSavings);
     }
 }
