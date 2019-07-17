@@ -5,13 +5,27 @@
  * @format
  * @flow
  */
-
+// External Dependencies
 import React, {Component} from 'react'
-import {StyleSheet, Text, View} from 'react-native'
+import {
+    StatusBar,
+    View,
+    NetInfo
+  } from 'react-native'
+
+// Internal Dependencies
+import Router from './screens/Router'
 
 
 export default class App extends Component {
     state = {loading: true, drizzleState: null}
+
+    componentWillMount() {
+        NetInfo.addEventListener(
+            'connectionChange',
+            this.handleFirstConnectivityChange
+            )
+    }
 
     componentDidMount() {
         const {drizzle} = this.props
@@ -29,25 +43,31 @@ export default class App extends Component {
         this.unsubscribe()
     }
 
+    handleFirstConnectivityChange = (connection) => {
+        const connectionType = connection.type === 'none' ? 'offline' : 'online'
+        if (connection.type === 'none') {
+          // TODO: Show toast for no internet
+        }
+        this.setState({connectionType});
+      }
+
     render() {
         return (
-            <View style={styles.container}>
-            <Text>Working</Text>
-                {/* #TODO: Re-add once contracts are fixed {this.state.loading ? (
-                    <Text>Loading Drizzle...</Text>
-                ) : (
-                    <View>
-                        <ReadString
-                            drizzle={this.props.drizzle}
-                            drizzleState={this.state.drizzleState}
-                        />
-                        <SetString
-                            drizzle={this.props.drizzle}
-                            drizzleState={this.state.drizzleState}
-                        />
-                    </View>
-                )} */}
-            </View>
+            <View style={{ flex: 1 }}>
+                <StatusBar
+                backgroundColor="transparent"
+                barStyle="light-content"
+                translucent
+                />
+                <Router />
+                <BlindScreen
+                ref={(ref) => { this.blind = ref }}
+                />
+                <Spinner
+                visible={false}
+                ref={(ref) => { NavStore.loading = ref }}
+                />
+             </View>
         )
     }
 }

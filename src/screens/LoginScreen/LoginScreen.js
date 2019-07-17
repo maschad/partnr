@@ -26,7 +26,7 @@ export default class LoginScreen extends Component {
               <Card>
                 <CardItem>
                   <Body>
-                    <Text></Text>
+                    <Text>Welcome to Partnr</Text>
                   </Body>
                 </CardItem>
               </Card>
@@ -38,15 +38,6 @@ export default class LoginScreen extends Component {
                 onPress={() => this.props.navigation.navigate("mnemonics")}
               >
                 <Text>Generate a wallet</Text>
-              </Button>
-              <Button
-                full
-                rounded
-                dark
-                style={{ marginTop: 10 }}
-                onPress={() => this.props.navigation.navigate("linkWallet")}
-              >
-                <Text>Already have a wallet?</Text>
               </Button>
             </Content>
           </Container>
