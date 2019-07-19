@@ -1756,7 +1756,7 @@ bignumber.js@^8.1.1:
   version "8.1.1"
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-8.1.1.tgz#4b072ae5aea9c20f6730e4e5d529df1271c4d885"
 
-bindings@^1.2.1, bindings@^1.3.1, bindings@^1.5.0:
+bindings@^1.2.1, bindings@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.5.0.tgz#10353c9e945334bc0511a6d90b38fbc7c9c504df"
   dependencies:
@@ -5547,6 +5547,23 @@ mkdirp@*, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+mobx-react-lite@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/mobx-react-lite/-/mobx-react-lite-1.4.0.tgz#193beb5fdddf17ae61542f65ff951d84db402351"
+  integrity sha512-5xCuus+QITQpzKOjAOIQ/YxNhOl/En+PlNJF+5QU4Qxn9gnNMJBbweAdEW3HnuVQbfqDYEUnkGs5hmkIIStehg==
+
+mobx-react@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-6.1.1.tgz#24a2c8a3393890fa732b4efd34cc6dcccf6e0e7a"
+  integrity sha512-hjACWCTpxZf9Sv1YgWF/r6HS6Nsly1SYF22qBJeUE3j+FMfoptgjf8Zmcx2d6uzA07Cezwap5Cobq9QYa0MKUw==
+  dependencies:
+    mobx-react-lite "1.4.0"
+
+mobx@^5.13.0:
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/mobx/-/mobx-5.13.0.tgz#0fd68f10aa5ff2d146a4ed9e145b53337cfbca59"
+  integrity sha512-eSAntMSMNj0PFL705rgv+aB/z1RjNqDnFEpBe18yQVreXTWiVgIrmBUXzjnJfuba+eo4eAk6zi+/gXQkSUea8A==
+
 mock-fs@^4.1.0:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/mock-fs/-/mock-fs-4.10.1.tgz#50a07a20114a6cdb119f35762f61f46266a1e323"
@@ -6297,7 +6314,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@15.x.x, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@15.x.x, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   dependencies:
@@ -6477,6 +6494,13 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-native-carousel@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/react-native-carousel/-/react-native-carousel-0.11.0.tgz#f1b63839fb2562d7a9e7bec915ef33ac1458fbed"
+  integrity sha512-efNZW9fSHtq2NlsBJb0iPKwcTPKi5esDTOo7ehnzYU46aaG5zVzWTaORGQ4ekizJ8tPUFopWAxfByIblR2cCsQ==
+  dependencies:
+    react-timer-mixin "^0.13.3"
 
 react-native-config@^0.11.7:
   version "0.11.7"
@@ -6685,7 +6709,7 @@ react-test-renderer@16.8.3:
     react-is "^16.8.3"
     scheduler "^0.13.3"
 
-react-timer-mixin@^0.13.4:
+react-timer-mixin@^0.13.3, react-timer-mixin@^0.13.4:
   version "0.13.4"
   resolved "https://registry.yarnpkg.com/react-timer-mixin/-/react-timer-mixin-0.13.4.tgz#75a00c3c94c13abe29b43d63b4c65a88fc8264d3"
   integrity sha512-4+ow23tp/Tv7hBM5Az5/Be/eKKF7DIvJ09voz5LyHGQaqqz9WV8YMs31eFvcYQs7d451LSg7kDJV70XYN/Ug/Q==
@@ -7859,16 +7883,6 @@ tr46@^1.0.1:
 trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
-
-truffle-hdwallet-provider@^1.0.14:
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/truffle-hdwallet-provider/-/truffle-hdwallet-provider-1.0.14.tgz#de926cdc18fdd2d206f6d12e1923e3b3d7259d18"
-  integrity sha512-C/WRdgQjQCrWYblnyTTEkQsl1Kc4XzcbNiEshzzFm5/fEqTcBskWEvhxIrJcZPB5nNmwZ5fcjUDGVHMGQK7GKQ==
-  dependencies:
-    any-promise "^1.3.0"
-    bindings "^1.3.1"
-    web3 "1.0.0-beta.37"
-    websocket "^1.0.28"
 
 tslib@1.9.3:
   version "1.9.3"

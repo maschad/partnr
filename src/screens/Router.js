@@ -1,15 +1,21 @@
 import { StackNavigator } from 'react-navigation'
+import * as Screens from '../screens';
 
 const Router = StackNavigator(
     {
-        LoginStack:{
-            screen:
+        HomePage: {
+            screen: Screens.HomeScreen
         }
     },
     {
-        initialRouteName: 'LoginStack',
-        cardStyle: { backgroundColor: AppStyle.backgroundColor },
-        mode: 'modal'
+        initialRouteName: INITIAL_ROUTE,
+        defaultNavigationOptions: {
+          headerStyle: {
+            backgroundColor: colors.primary
+          },
+          headerTintColor: colors.secondary,
+          tintColor: colors.secondary
+        }
     }
 )
 
