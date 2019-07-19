@@ -1,6 +1,11 @@
 partnr
 =======
-An dApp for saving together
+An dApp for saving together using CDPs in [Dai](https://makerdao.com/en/dai/) for stability. Currently only ethereum but eventually[ multi-collateral dai](https://makerdao.com/da/whitepaper/#mkr-and-multi-collateral-dai).
+
+![GitHub Logo](src/assets/images/ethereum_symbol.png)
+![GitHub Logo](src/assets/images/swap.png)
+
+![GitHub Logo](src/assets/images/dai_symbol.png)
 
 <!-- ABOUT THE PROJECT -->
 
