@@ -16,11 +16,18 @@ import {
 // Internal Dependencies
 import Router from './screens/Router'
 
+const STATUSBAR_CONFIG = {
+    backgroundColor: colors.statusBar,
+    barStyle: 'light-content',
+    translucent: false
+};
+
 
 export default class App extends Component {
     state = {loading: true, drizzleState: null}
 
     componentWillMount() {
+        BackHandler.addEventListener('hardwareBackPress', () => this.handleBackButton());
         NetInfo.addEventListener(
             'connectionChange',
             this.handleFirstConnectivityChange
@@ -40,6 +47,7 @@ export default class App extends Component {
     }
 
     componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress');
         this.unsubscribe()
     }
 
@@ -51,29 +59,40 @@ export default class App extends Component {
         this.setState({connectionType});
       }
 
+    handleBackButton() {
+        if (!this.props.navigation) return false;
+        
+        const { state, goBack } = this.props.navigation;
+        if (state.routes.length > 1 && state.index > 0) {
+            goBack();
+            return true;
+        }
+        return false;
+    }
+
     render() {
         return (
-            <View style={{ flex: 1 }}>
-                <StatusBar
-                backgroundColor="transparent"
-                barStyle="light-content"
-                translucent
-                />
-                <Router />
-                <Spinner
-                visible={false}
-                ref={(ref) => { NavStore.loading = ref }}
-                />
-             </View>
+            <Provider {...stores}>
+                <View style={styles.container}>
+                    <StatusBar
+                        {...STATUSBAR_CONFIG}
+                    />
+                    <Router />
+                    <Spinner
+                    visible={false}
+                    ref={(ref) => { NavStore.loading = ref }}
+                    />
+                </View>
+            </Provider>
         )
     }
 }
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: colors.defaultBackground,
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF'
+        alignItems: 'stretch',
+        justifyContent: 'center'
     }
-})
+});

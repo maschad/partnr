@@ -1,5 +1,6 @@
 import {Component} from 'react';
-import { FlatList, RefreshControl, StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import { Container, Header, Content, Card, CardItem, Text, Icon, Right } from 'native-base';
 import { inject, observer } from 'mobx-react';
 import { HeaderIcon } from '@components/widgets';
 import { colors, measures } from '@common/styles';
@@ -27,7 +28,7 @@ export class HomeScreen extends Component {
              </CardItem>
         </Card>
     );
-
+ 
     render() {
         const { list } = this.props.wallets;
         return (

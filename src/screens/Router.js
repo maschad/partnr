@@ -1,7 +1,7 @@
 import { StackNavigator } from 'react-navigation'
 import * as Screens from '../screens';
 
-const Router = StackNavigator(
+const navigator = StackNavigator(
     {
         HomePage: {
             screen: Screens.HomeScreen
@@ -19,4 +19,6 @@ const Router = StackNavigator(
     }
 )
 
-export default Router;
+const AppContainer = createAppContainer(navigator);
+
+export default AppContainer;
