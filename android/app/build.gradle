@@ -102,11 +102,12 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.udecideclient"
+        applicationId "com.partnr"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        missingDimensionStrategy "react-native-camera", "general"
     }
     splits {
         abi {
@@ -138,11 +139,15 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-vector-icons')
+    implementation project(':react-native-svg')
+    implementation project(':react-native-snackbar')
+    implementation project(':react-native-sensitive-info')
     implementation project(':react-native-gesture-handler')
-    implementation project(':react-native-randombytes')
+    implementation project(':react-native-camera')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    implementation "com.facebook.react:react-native:0.59.0"  // From node_modules
+    implementation "com.facebook.react:react-native:+"  // From node_modules
 }
 
 // Run this once to be able to run the application with BUCK

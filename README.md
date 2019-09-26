@@ -1,60 +1,68 @@
-partnr
-=======
-An dApp for saving together using CDPs in [Dai](https://makerdao.com/en/dai/) for stability. Currently only ethereum but eventually[ multi-collateral dai](https://makerdao.com/da/whitepaper/#mkr-and-multi-collateral-dai).
+# Ethereum Wallet
 
-![GitHub Logo](src/assets/images/ethereum_symbol.png)
-![GitHub Logo](src/assets/images/swap.png)
+This project is a Ethereum Wallet built on top of ReactNative.
 
-![GitHub Logo](src/assets/images/dai_symbol.png)
+## Table of Contents
 
-<!-- ABOUT THE PROJECT -->
+* [Available Scripts](#available-scripts)
+  * [npm start](#npm-start)
+  * [npm test](#npm-test)
+  * [npm run ios](#npm-run-ios)
+  * [npm run android](#npm-run-android)
+  * [npm run android-build](#npm-run-android-build)
+  * [npm run android-bundle](#npm-run-android-bundle)
+  * [npm run android-clean](#npm-run-android-clean)
+* [Writing and Running Tests](#writing-and-running-tests)
+* [License](#license)
+* [Contribute](#contribute)
 
-### Built With
-* [React Native](https://facebook.github.io/react-native/)
-* [Truffle](https://github.com/trufflesuite/truffle)
-* [Drizzle](https://www.trufflesuite.com/drizzle)
+## Available Scripts
 
+### `npm install`
 
+Installs all dependencies and prepares the app to run.
 
-<!-- GETTING STARTED -->
-## Getting Started
-### Prerequisites
+### `npm start`
 
-This is an example of how to list things you need to use the software and how to install them.
-* [yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
-```sh
-brew install yarn
-```
+Runs Packager to provide your app in development mode.
 
-### Installation
+#### `npm test`
 
-1. Clone the repo
-```sh
-git clone https:://github.com/your_username_/Project-Name.git
-```
-2. Install NPM packages
-```sh
-yarn
-```
+Runs the [jest](https://github.com/facebook/jest) test runner on your tests.
 
+#### `npm run ios`
 
+Open your app in the iOS Simulator if you're on a Mac and have it installed. Depends on `npm start`.
 
+#### `npm run android`
 
-<!-- CONTRIBUTING -->
-## Contributing
+Open your app on a connected Android device or emulator. Requires an installation of Android build tools (see [React Native docs](https://facebook.github.io/react-native/docs/getting-started.html) for detailed setup). Depends on `npm start`.
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+#### `npm run android:build`
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Build the Android app and generate the APK to install on the device.
 
+#### `npm run android:bundle`
 
+Bundles the ReactNative JavaScript code. Run it before running the build command to be able to run the test without depending on the development server.
 
-<!-- LICENSE -->
+#### `npm run android:generate-apk`
+
+Bundle and build the Android app.
+
+#### `npm run android:clean`
+
+Clean the Android generated build files.
+
+## Writing and Running Tests
+
+This project is set up to use [jest](https://facebook.github.io/jest/) for tests. You can configure whatever testing strategy you like, but jest works out of the box. Create test files in directories called `__tests__` or with the `.test` extension to have the files loaded by jest. See [the template project](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/App.test.js) for an example test. The [jest documentation](https://facebook.github.io/jest/docs/getting-started.html) is also a wonderful resource, as is the [React Native testing tutorial](https://facebook.github.io/jest/docs/tutorial-react-native.html).
+
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+MIT
 
+
+## Contribute
+
+TODO
