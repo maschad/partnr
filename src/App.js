@@ -14,7 +14,7 @@ import {
   } from 'react-native'
 
 // Internal Dependencies
-import Router from './screens/Router'
+import Router from './Router'
 
 const STATUSBAR_CONFIG = {
     backgroundColor: colors.statusBar,

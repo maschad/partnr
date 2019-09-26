@@ -3,13 +3,21 @@
  */
 
 import './shims'
-import {AppRegistry} from 'react-native'
+import {AppRegistry, YellowBox} from 'react-native'
 import App from './src/App'
 import {name as appName} from './app.json'
 
 import React from 'react'
 import {Drizzle, generateStore} from 'drizzle'
 import MyStringStore from './build/contracts/MyStringStore.json'
+
+YellowBox.ignoreWarnings([
+    'Warning: componentWillMount',
+    'Warning: componentWillReceiveProps',
+    'Module RCTImageLoader',
+    'Class RCTCxxModule was not exported',
+    'Remote debugger'
+  ]);
 
 const options = {
     contracts: [MyStringStore]
