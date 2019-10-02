@@ -1,18 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { colors } from '@common/styles';
+import { Container, Text } from 'native-base';
+
 
 export default () => (
-    <View style={styles.container}>
-        <Text style={styles.message}>
-            There are no wallets configured. Click on the + button to add a new one.
-        </Text>
-    </View>
+   <Container>
+       <Text>No Wallets</Text>
+   </Container>
 );
-
-const styles = StyleSheet.create({
-    container: {},
-    message: {
-        color: colors.black
-    }
-});

@@ -13,14 +13,7 @@ import WalletCard from './WalletCard';
 export class WalletsOverview extends React.Component {
 
     static navigationOptions = ({ navigation, screenProps }) => ({
-        title: 'Overview',
-        headerLeft: (
-            <HeaderIcon
-                name='add'
-                size='large'
-                color={colors.white}
-                onPress={() => navigation.navigate('NewWalletName')} />
-        ),
+        title: 'Home',
         headerRight: (
             <HeaderIcon
                 name='settings'
@@ -58,21 +51,24 @@ export class WalletsOverview extends React.Component {
 
     renderItem = ({ item }) => <WalletCard wallet={item} onPress={() => this.onPressWallet(item)} />
 
-    renderBody = (list) => (!list.length && !this.loading) ? <NoWallets /> : (
+    renderBody = (list) => (
+        <View>
+        <TotalBalance wallets={list} />
         <FlatList
             style={styles.content}
             data={list}
             refreshControl={<RefreshControl refreshing={this.loading} onRefresh={() => this.populate()} />}
             keyExtractor={(item, index) => String(index)}
             renderItem={this.renderItem} />
+        </View>
+       
     );
 
     render() {
         const { list } = this.props.wallets;
         return (
             <View style={styles.container}>
-                <TotalBalance wallets={list} />
-                {this.renderBody(list)}
+                {(!list.length && !this.loading) ? <NoWallets/> : this.renderBody(list)}
             </View>
         );
     }
