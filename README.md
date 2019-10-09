@@ -1,6 +1,6 @@
-# Ethereum Wallet
+# Partnr
+This is a decentralized savings platform built to run on ethereum, using [Dai.js](https://makerdao.com/documentation/)
 
-This project is a Ethereum Wallet built on top of ReactNative.
 
 ## Table of Contents
 
