@@ -1,5 +1,5 @@
 {
-  "name": "EthereumWallet",
+  "name": "Partnr",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
@@ -12,7 +12,8 @@
     "android:generate-apk": "npm run android:bundle && npm run android:build",
     "android": "react-native run-android",
     "logcat": "adb logcat *:S ReactNative:V ReactNativeJS:V",
-    "ios": "react-native run-ios"
+    "ios": "react-native run-ios",
+    "postinstall": "rndebugger-open"
   },
   "dependencies": {
     "axios": "0.19.0",
@@ -25,6 +26,7 @@
     "react": "16.8.6",
     "react-native": "0.59.9",
     "react-native-camera": "2.10.1",
+    "react-native-easy-grid": "^0.2.2",
     "react-native-gesture-handler": "1.2.1",
     "react-native-modal": "11.0.1",
     "react-native-permissions": "1.1.1",
@@ -49,6 +51,7 @@
     "eslint-config-rallycoding": "3.2.0",
     "jest": "24.8.0",
     "metro-react-native-babel-preset": "0.54.1",
+    "react-native-debugger-open": "^0.3.22",
     "react-native-mock-render": "0.1.3",
     "react-test-renderer": "16.8.6"
   },

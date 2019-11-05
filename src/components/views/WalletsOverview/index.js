@@ -1,9 +1,16 @@
 import React from 'react';
-import { FlatList, RefreshControl, StyleSheet, Text, View } from 'react-native';
+import { FlatList, RefreshControl, StyleSheet, View } from 'react-native';
+
 import { inject, observer } from 'mobx-react';
 import { HeaderIcon } from '@components/widgets';
 import { colors, measures } from '@common/styles';
+
+import { Container, Card, CardItem, Text, Body } from 'native-base';
+import { Grid } from 'react-native-easy-grid';
+
 import { General as GeneralActions, Wallets as WalletActions, Prices as PricesActions } from '@common/actions';
+
+
 import NoWallets from './NoWallets';
 import TotalBalance from './TotalBalance';
 import WalletCard from './WalletCard';
@@ -67,20 +74,14 @@ export class WalletsOverview extends React.Component {
     render() {
         const { list } = this.props.wallets;
         return (
-            <View style={styles.container}>
+            <Container>
                 {(!list.length && !this.loading) ? <NoWallets/> : this.renderBody(list)}
-            </View>
+            </Container>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: measures.defaultPadding,
-        alignItems: 'stretch',
-        justifyContent: 'flex-start'
-    },
     content: {
         marginTop: measures.defaultMargin
     }
