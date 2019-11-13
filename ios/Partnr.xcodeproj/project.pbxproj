@@ -64,6 +64,7 @@
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		F6076EF2F293472F9E92B7F2 /* libRNSnackbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A01CE46C470246A0981E41E9 /* libRNSnackbar.a */; };
+		85762820B31E487992BFDEF2 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BB5ABF66E434C6D92D0E3B6 /* Fontisto.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -473,6 +474,7 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EDB2FC2998CD4996ADB1539C /* RNSensitiveInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSensitiveInfo.xcodeproj; path = "../node_modules/react-native-sensitive-info/ios/RNSensitiveInfo.xcodeproj"; sourceTree = "<group>"; };
 		F9FCEFE6B9EC401593025DE4 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		8BB5ABF66E434C6D92D0E3B6 /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -850,6 +852,7 @@
 				CC2C947151DB4488BB4CB5ED /* Octicons.ttf */,
 				ADBD21280A944B25A0D620AD /* SimpleLineIcons.ttf */,
 				9B55D8D50F27488A8E274601 /* Zocial.ttf */,
+				8BB5ABF66E434C6D92D0E3B6 /* Fontisto.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1414,6 +1417,7 @@
 				A88B45D3690E413EA3254FDE /* Octicons.ttf in Resources */,
 				8B5E1D9FCB53469AB2A0629D /* SimpleLineIcons.ttf in Resources */,
 				D674DAF155644CFB80CDFF96 /* Zocial.ttf in Resources */,
+				85762820B31E487992BFDEF2 /* Fontisto.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
