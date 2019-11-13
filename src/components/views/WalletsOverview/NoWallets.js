@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, View} from 'react-native';
 import { Body, Button, Content, Card, CardItem, Fab, Text } from 'native-base';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
  
 export default () => {
@@ -36,8 +36,8 @@ export default () => {
                 <Button style={{ backgroundColor: '#FFF' }}>
                     <Icon name="bitcoin" size={30} color="#000" />
                 </Button>
-                <Button style={{ backgroundColor: '#3B5998' }}>
-                    <Icon name="ethereum" size={30} color="#900" />
+                <Button style={{ backgroundColor: '##FFF' }}>
+                    <Icon name="ethereum" size={30} color="#000" />
                 </Button>
           </Fab>
         </View>
