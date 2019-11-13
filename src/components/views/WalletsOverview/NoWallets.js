@@ -36,7 +36,7 @@ export default () => {
                 <Button style={{ backgroundColor: '#FFF' }}>
                     <Icon name="bitcoin" size={30} color="#000" />
                 </Button>
-                <Button style={{ backgroundColor: '##FFF' }}>
+                <Button style={{ backgroundColor: '#FFF' }}>
                     <Icon name="ethereum" size={30} color="#000" />
                 </Button>
           </Fab>
