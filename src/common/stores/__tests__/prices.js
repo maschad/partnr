@@ -15,19 +15,19 @@ describe('PricesStore', () => {
             pricesStore.setUSDRate(350);
             expect(pricesStore.usd).toBe(350);
             expect(pricesStore.eur).toBe(0);
-            expect(pricesStore.brl).toBe(0);
+            expect(pricesStore.jmd).toBe(0);
         });
         
         it('should be able to change the eur price', () => {
             pricesStore.setEURRate(300);
             expect(pricesStore.eur).toBe(300);
             expect(pricesStore.usd).toBe(0);
-            expect(pricesStore.brl).toBe(0);
+            expect(pricesStore.jmd).toBe(0);
         });
         
-        it('should be able to change the brl price', () => {
-            pricesStore.setBRLRate(300);
-            expect(pricesStore.brl).toBe(300);
+        it('should be able to change the jmd price', () => {
+            pricesStore.setJMDRate(300);
+            expect(pricesStore.jmd).toBe(300);
             expect(pricesStore.usd).toBe(0);
             expect(pricesStore.eur).toBe(0);
         });
@@ -80,39 +80,39 @@ describe('PricesStore', () => {
             expect(pricesStore.eur).toBe(0);
         });
         
-        it('should fail to change the BRL price if a NaN is given', () => {
+        it('should fail to change the JMD price if a NaN is given', () => {
             try {
-                pricesStore.setBRLRate("whatever");
+                pricesStore.setJMDRate("whatever");
                 fail('Should have thrown an error');
             } catch(e) { expect(e.message).toBe('The input is NaN') }
             try {
-                pricesStore.setBRLRate(true);
+                pricesStore.setJMDRate(true);
                 fail('Should have thrown an error');
             } catch(e) { expect(e.message).toBe('The input is NaN') }
             try {
-                pricesStore.setBRLRate(false);
+                pricesStore.setJMDRate(false);
                 fail('Should have thrown an error');
             } catch(e) { expect(e.message).toBe('The input is NaN') }
             try {
-                pricesStore.setBRLRate({});
+                pricesStore.setJMDRate({});
                 fail('Should have thrown an error');
             } catch(e) { expect(e.message).toBe('The input is NaN') }
             try {
-                pricesStore.setBRLRate([]);
+                pricesStore.setJMDRate([]);
                 fail('Should have thrown an error');
             } catch(e) { expect(e.message).toBe('The input is NaN') }
-            expect(pricesStore.brl).toBe(0);
+            expect(pricesStore.jmd).toBe(0);
         });
         
         it('should be able to reset the store state', () => {
             pricesStore.isLoading(true);
             pricesStore.setUSDRate(350);
             pricesStore.setEURRate(300);
-            pricesStore.setBRLRate(250);
+            pricesStore.setJMDRate(250);
             pricesStore.reset();
             expect(pricesStore.usd).toBe(0);
             expect(pricesStore.eur).toBe(0);
-            expect(pricesStore.brl).toBe(0);
+            expect(pricesStore.jmd).toBe(0);
             expect(pricesStore.loading).toBe(false);
         });
 });

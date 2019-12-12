@@ -6,6 +6,6 @@ export async function getPrice() {
     const { data } = await ApiService.getPrice();
     PricesStore.setUSDRate(data.USD);
     PricesStore.setEURRate(data.EUR);
-    PricesStore.setBRLRate(data.BRL);
+    PricesStore.setJMDRate(data.JMD);
     PricesStore.isLoading(false);
 }
