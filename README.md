@@ -1,6 +1,8 @@
 # Partnr
 This is a decentralized savings platform built to run on ethereum, using [Dai.js](https://makerdao.com/documentation/)
 
+[![CircleCI](https://circleci.com/gh/maschad/partnr.svg?style=svg)](https://circleci.com/gh/maschad/partnr)
+
 
 ## Table of Contents
 
