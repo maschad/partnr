@@ -73,9 +73,10 @@ export class WalletsOverview extends React.Component {
 
     render() {
         const { list } = this.props.wallets;
+        const { navigation } = this.props;
         return (
             <Container>
-                {(!list.length && !this.loading) ? <NoWallets/> : this.renderBody(list)}
+                {(!list.length && !this.loading) ? <NoWallets {...navigation}/> : this.renderBody(list)}
             </Container>
         );
     }

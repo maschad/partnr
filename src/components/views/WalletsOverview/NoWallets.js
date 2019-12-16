@@ -4,7 +4,7 @@ import { Body, Button, Content, Card, CardItem, Fab, Text } from 'native-base';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
  
-export default () => {
+export default (navigation) => {
     const [active, setActive] = useState(false);
 
     const onPress = () => {
@@ -34,10 +34,7 @@ export default () => {
                 onPress={() => onPress()}>
                 <Icon name="plus" size={30} color="#000" />
                 <Button style={{ backgroundColor: '#FFF' }}>
-                    <Icon name="bitcoin" size={30} color="#000" />
-                </Button>
-                <Button style={{ backgroundColor: '#FFF' }}>
-                    <Icon name="ethereum" size={30} color="#000" />
+                    <Icon name="ethereum" size={30} color="#000" onPress={() => navigation.navigate('NewWalletName')}/>
                 </Button>
           </Fab>
         </View>
