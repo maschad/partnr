@@ -1,9 +1,16 @@
 import React from 'react';
-import { FlatList, RefreshControl, StyleSheet, Text, View } from 'react-native';
+import { FlatList, RefreshControl, StyleSheet, View } from 'react-native';
+
 import { inject, observer } from 'mobx-react';
 import { HeaderIcon } from '@components/widgets';
 import { colors, measures } from '@common/styles';
+
+import { Container, Card, CardItem, Text, Body } from 'native-base';
+import { Grid } from 'react-native-easy-grid';
+
 import { General as GeneralActions, Wallets as WalletActions, Prices as PricesActions } from '@common/actions';
+
+
 import NoWallets from './NoWallets';
 import TotalBalance from './TotalBalance';
 import WalletCard from './WalletCard';
@@ -13,14 +20,7 @@ import WalletCard from './WalletCard';
 export class WalletsOverview extends React.Component {
 
     static navigationOptions = ({ navigation, screenProps }) => ({
-        title: 'Overview',
-        headerLeft: (
-            <HeaderIcon
-                name='add'
-                size='large'
-                color={colors.white}
-                onPress={() => navigation.navigate('NewWalletName')} />
-        ),
+        title: 'Home',
         headerRight: (
             <HeaderIcon
                 name='settings'
@@ -58,33 +58,31 @@ export class WalletsOverview extends React.Component {
 
     renderItem = ({ item }) => <WalletCard wallet={item} onPress={() => this.onPressWallet(item)} />
 
-    renderBody = (list) => (!list.length && !this.loading) ? <NoWallets /> : (
+    renderBody = (list) => (
+        <View>
+        <TotalBalance wallets={list} />
         <FlatList
             style={styles.content}
             data={list}
             refreshControl={<RefreshControl refreshing={this.loading} onRefresh={() => this.populate()} />}
             keyExtractor={(item, index) => String(index)}
             renderItem={this.renderItem} />
+        </View>
+       
     );
 
     render() {
         const { list } = this.props.wallets;
+        const { navigation } = this.props;
         return (
-            <View style={styles.container}>
-                <TotalBalance wallets={list} />
-                {this.renderBody(list)}
-            </View>
+            <Container>
+                {(!list.length && !this.loading) ? <NoWallets {...navigation}/> : this.renderBody(list)}
+            </Container>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: measures.defaultPadding,
-        alignItems: 'stretch',
-        justifyContent: 'flex-start'
-    },
     content: {
         marginTop: measures.defaultMargin
     }
