@@ -1,14 +1,19 @@
-const partnrGroup = require('../contracts/PartnrGroup.sol');
+const PartnrGroup = artifacts.require('PartnrGroup');
 
-contract('TestPartnrGroup', () => {
+require('chai').should();
 
-    it("Should initialize the group", async () => {
-        ballotOfficialName = "Vote for new member";
-        proposal = "Add new member";
-        let group = await partnrGroup.new(ballotOfficialName, proposal);
-        
-        assert.equal(group.proposal, proposal);
-        assert.equal(group.ballotOfficialName, ballotOfficialName);
-    })
+contract('TestPartnrGroup', accounts => {
+    const ballotOfficialName = "name";
+    const proposal = "proposal";
 
+    beforeEach(async () => {
+        this.ballot = await PartnrGroup.new(ballotOfficialName, proposal);
+    });
+
+    describe('Ballot attributes', () => {
+        it('Should have correct name', async () => {
+            const name = await this.ballot.ballotOfficialName();
+            name.should.equal(ballotOfficialName);
+        });
+    });
 });
