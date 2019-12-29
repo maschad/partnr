@@ -11,9 +11,11 @@ contract('TestPartnrGroup', accounts => {
     });
 
     describe('Ballot attributes', () => {
-        it('Should have correct name', async () => {
+        it('Should have correct initialization', async () => {
             const name = await this.ballot.ballotOfficialName();
+            const prop = await this.ballot.proposal();
             name.should.equal(ballotOfficialName);
+            prop.should.equal(proposal);
         });
     });
 });
