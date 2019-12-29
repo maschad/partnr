@@ -28,7 +28,7 @@ export class ChangeCurrency extends React.Component {
         return (
             <ScrollView style={styles.container}>
                 {this.renderItems([
-                    { title: 'Brazilian Real', action: () => this.selectCurrency('brl') },
+                    { title: 'Jamaican Dollar', action: () => this.selectCurrency('jmd') },
                     { title: 'Dollar', action: () => this.selectCurrency('usd') },
                     { title: 'Euro', action: () => this.selectCurrency('eur') },
                 ])}

@@ -2,7 +2,7 @@ import * as Api from '../api';
 
 describe('ApiService', () => {
 
-    it('should be able to get the price conversion between ETH, USD, BRL, and EUR', async function() {
+    it('should be able to get the price conversion between ETH, USD, JMD, and EUR', async function() {
         try {
             const response = await Api.getPrice();
             expect(response.status).toBe(200);
@@ -10,8 +10,8 @@ describe('ApiService', () => {
             expect(response.data.USD).not.toBeNaN();
             expect(response.data.EUR).toBeDefined();
             expect(response.data.EUR).not.toBeNaN();
-            expect(response.data.BRL).toBeDefined();
-            expect(response.data.BRL).not.toBeNaN();
+            expect(response.data.JMD).toBeDefined();
+            expect(response.data.JMD).not.toBeNaN();
         } catch (e) {
             fail(e);
         }

@@ -3,7 +3,7 @@ import { action, observable } from 'mobx';
 const INITIAL = {
     usd: 0,
     eur: 0,
-    brl: 0,
+    jmd: 0,
     loading: false
 };
 
@@ -11,7 +11,7 @@ export class PricesStore {
 
     @observable usd = INITIAL.usd;
     @observable eur = INITIAL.eur;
-    @observable brl = INITIAL.brl;
+    @observable jmd = INITIAL.jmd;
     @observable loading = INITIAL.loading;
 
     validateInput(input) {
@@ -32,15 +32,15 @@ export class PricesStore {
         this.eur = Number(rate);
     }
     
-    @action setBRLRate(rate) {
+    @action setJMDRate(rate) {
         this.validateInput(rate);
-        this.brl = Number(rate);
+        this.jmd = Number(rate);
     }
 
     @action reset() {
         this.usd = INITIAL.usd;
         this.eur = INITIAL.eur;
-        this.brl = INITIAL.brl;
+        this.jmd = INITIAL.jmd;
         this.loading = INITIAL.loading;
     }
 }
