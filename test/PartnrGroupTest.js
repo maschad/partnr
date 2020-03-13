@@ -34,6 +34,10 @@ contract('TestPartnrGroup', accounts => {
 
         })
 
+        it('Should update total votes', async() => {
+
+        })
+
         it('Only creator can add voter', async() => {
 
         });
