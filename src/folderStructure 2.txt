@@ -1,0 +1,83 @@
+.
+├── Router.js
+├── assets
+│   └── ethereum-logo.png
+├── common
+│   ├── actions
+│   │   ├── __tests__
+│   │   ├── general.js
+│   │   ├── index.js
+│   │   ├── prices.js
+│   │   ├── recents.js
+│   │   ├── transactions.js
+│   │   └── wallets.js
+│   ├── constants
+│   │   ├── index.js
+│   │   ├── recents.js
+│   │   ├── storage.js
+│   │   ├── url.js
+│   │   └── wallet.js
+│   ├── services
+│   │   ├── __tests__
+│   │   ├── api.js
+│   │   ├── index.js
+│   │   ├── recents.js
+│   │   ├── storage.js
+│   │   ├── transactions.js
+│   │   └── wallets.js
+│   ├── stores
+│   │   ├── __tests__
+│   │   ├── index.js
+│   │   ├── prices.js
+│   │   ├── recents.js
+│   │   ├── wallet.js
+│   │   └── wallets.js
+│   ├── styles
+│   │   ├── colors.js
+│   │   ├── index.js
+│   │   └── measures.js
+│   └── utils
+│       ├── __tests__
+│       ├── image.js
+│       ├── index.js
+│       ├── shims.js
+│       ├── transaction.js
+│       └── wallet.js
+├── components
+│   ├── views
+│   │   ├── ChangeCurrency
+│   │   ├── ConfirmMnemonics
+│   │   ├── ConfirmTransaction
+│   │   ├── CreateMnemonics
+│   │   ├── CreateWallet
+│   │   ├── LoadMnemonics
+│   │   ├── LoadPrivateKey
+│   │   ├── LoadWallet
+│   │   ├── NewWallet
+│   │   ├── NewWalletName
+│   │   ├── ReceiveCoins
+│   │   ├── SelectDestination
+│   │   ├── SendCoins
+│   │   ├── Settings
+│   │   ├── ShowPrivateKey
+│   │   ├── WalletDetails
+│   │   ├── WalletExtract
+│   │   ├── WalletSettings
+│   │   ├── WalletsOverview
+│   │   └── index.js
+│   └── widgets
+│       ├── Button
+│       ├── Calculator
+│       ├── Camera
+│       ├── HeaderIcon
+│       ├── Icon
+│       ├── InputWithIcon
+│       ├── NumberGrid
+│       ├── TabView
+│       ├── TextBullet
+│       └── index.js
+├── index.js
+├── partnr-tree.txt
+└── setupTests.js
+
+43 directories, 37 files

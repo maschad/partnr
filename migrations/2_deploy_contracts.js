@@ -1,5 +1,8 @@
-const MultisigWalletFactory = artifacts.require('MultiSigWalletWithDailyLimitFactory.sol')
+const PartnrGroup = artifacts.require('PartnrGroup')
 
 module.exports = function (deployer) {
-    deployer.deploy(MultisigWalletFactory)
+    const ballotOfficialName = "Add new wallet";
+    const proposal = "proposal";
+
+    deployer.deploy(PartnrGroup, ballotOfficialName, proposal);
 }

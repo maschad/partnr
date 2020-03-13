@@ -1,4 +1,4 @@
-pragma solidity ^0.5.1;
+pragma solidity >=0.4.21 <0.6.0;
 
 contract Escrow {
     // Parameters of the total savings.

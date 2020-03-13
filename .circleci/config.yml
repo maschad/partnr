@@ -8,6 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:12.10
+      - image: trufflesuite/ganache-cli
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -34,4 +35,12 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test --maxWorkers=2 --ci
+      - run:
+        name: jest
+        command: yarn test --maxWorkers=2 --ci
+      - run:
+        name: Migrate Contracts
+        command: ./node_modules/truffle/build/cli.bundled.js migrate --network development
+      - run:
+        name: Test Contracts
+        command: ./node_modules/truffle/build/cli.bundled.js test --network development
