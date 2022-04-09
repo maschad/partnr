@@ -21,7 +21,7 @@
     "identicon.js": "2.3.3",
     "mobx": "5.9.4",
     "mobx-react": "5.4.4",
-    "moment": "2.24.0",
+    "moment": "2.29.2",
     "native-base": "^2.13.8",
     "react": "16.8.6",
     "react-native": "0.62.3",
