@@ -24,7 +24,7 @@
     "moment": "2.29.4",
     "native-base": "^2.13.8",
     "react": "16.8.6",
-    "react-native": "0.62.3",
+    "react-native": "0.71.4",
     "react-native-camera": "2.10.1",
     "react-native-easy-grid": "^0.2.2",
     "react-native-gesture-handler": "1.2.1",
