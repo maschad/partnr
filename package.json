@@ -16,7 +16,7 @@
     "postinstall": "rndebugger-open"
   },
   "dependencies": {
-    "axios": "0.21.2",
+    "axios": "1.6.0",
     "ethers": "3.0.29",
     "identicon.js": "2.3.3",
     "mobx": "5.9.4",
