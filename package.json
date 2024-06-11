@@ -43,7 +43,7 @@
     "@babel/plugin-transform-runtime": "7.4.4",
     "@babel/runtime": "7.4.5",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "24.8.0",
+    "babel-jest": "29.7.0",
     "babel-plugin-module-resolver": "5.0.0",
     "babel-preset-react-native": "4.0.1",
     "enzyme": "3.9.0",
